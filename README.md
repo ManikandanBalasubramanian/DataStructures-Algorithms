@@ -8,8 +8,10 @@ together by pointers, and include lists, trees, and graph adjacency lists.
 
 # Algorithm
 An algorithm is a procedure to accomplish a speciﬁc task. An algorithm is the idea behind any reasonable computer program. 
+
 In the words of someone
 > A super computer cannot solve your problem but a good algorithm can.
+
 Algorithm design form one of the core practical technologies of computer science. Designing correct, eﬃcient, and implementable algorithms for real-world problems requires access to two distinct bodies of knowledge:
 - **Techniques** – Good algorithm designers understand several fundamental algorithm design techniques, including data structures, dynamic programming, depth-ﬁrst search, backtracking, and heuristics. Perhaps the single most important design technique is modeling, the art of abstracting a messy real-world application into a clean problem suitable for algorithmic attack.
 - **Resources** – Good algorithm designers stand on the shoulders of giants. Rather than laboring from scratch to produce a new algorithm for every task, they can ﬁgure out what is known about a particular problem. Rather than re-implementing popular algorithms from scratch, they seek existing implementations to serve as a starting point.
