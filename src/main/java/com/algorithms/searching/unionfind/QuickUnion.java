@@ -1,4 +1,4 @@
-package com.algorithms.unionfind;
+package com.algorithms.searching.unionfind;
 
 public class QuickUnion {
 

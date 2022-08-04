@@ -1,4 +1,4 @@
-package com.algorithms.unionfind;
+package com.algorithms.searching.unionfind;
 
 import junit.framework.TestCase;
 
