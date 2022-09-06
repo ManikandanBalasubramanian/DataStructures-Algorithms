@@ -98,6 +98,30 @@ Insertion sort is the staright forward sorting algorithm.
 Sorting using Insertion sort is too expensive.
 Insertion Sort has space complexity of O(1) and Time complexity of O(N2).
 
+## Merge Sort
+In Mergesort,  we do divide and conquer by splitting the array into two until the size of the array becomes 1.
+Sort the left array and right array and merge them.
+
+Splitting the array into two parts
+```
+id[] 2 8 5 3 9 4
+     2 8 5      3 9 4
+     2   8 5    3   9 4
+     2  8  5    3  9  4
+```
+
+Merging the sorted parts
+```
+     2  8  5  3  9  4
+     2  5 8  3  9  4
+     2 5 8  3  9  4
+     2 5 8  3  4 9
+     2 5 8  3 4 9
+     2 3 4 5 8 9
+```
+
+Merge sort creates duplicate array while merging and has space complexity of O(N) and Time complexity of O(NlogN).
+
 
 ## Selection Sort
 In Selection sort, we star one number with all other numbers and swap them. Lowest number will end up in the left at each iteration.
