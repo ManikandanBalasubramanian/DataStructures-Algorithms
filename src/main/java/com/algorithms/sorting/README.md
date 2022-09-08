@@ -123,6 +123,46 @@ Merging the sorted parts
 Merge sort creates duplicate array while merging and has space complexity of O(N) and Time complexity of O(NlogN).
 
 
+## Quick Sort
+In Quicksort,  we do divide and conquer by pivoting a element and elements to the left are smaller and to the right are larger.
+This is a recursive algorithm from start to end.
+
+```
+id[] 2 8 5 3 9 4
+     i         p 
+     2 3 5 8 9 4
+       i       p
+     2 3 4 8 9 5
+         i
+```
+
+At the end of the 1st sort stack, we will have the partitionIndex at 2. 
+The process is repeated for start to i-1 and i+1 to end
+
+
+```
+id[] 2 3 4 8 9 5
+       i
+
+     2 3 5 8 9 4
+     i         
+
+     2 3 4 8 9 5
+           i   p
+     2 3 4 5 9 8
+           i   
+
+     2 3 4 5 9 8
+             i p
+     2 3 4 5 8 9 
+             i
+
+```
+
+Quick sort creates random pivots to achieve average case time complexity. It has space complexity of O(N) and Average Case Time complexity of O(NlogN) and worst case of O(N2).
+
+
+
 ## Selection Sort
 In Selection sort, we star one number with all other numbers and swap them. Lowest number will end up in the left at each iteration.
 
