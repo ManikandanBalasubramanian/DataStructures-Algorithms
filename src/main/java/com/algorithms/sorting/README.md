@@ -162,6 +162,14 @@ id[] 2 3 4 8 9 5
 Quick sort creates random pivots to achieve average case time complexity. It has space complexity of O(N) and Average Case Time complexity of O(NlogN) and worst case of O(N2).
 
 
+## Radix Sort
+Radix sort is the linear sorting algorithm that is used for integers. In Radix sort, there is digit by digit sorting is performed that is started from the least significant digit to the most significant digit.
+
+irst, we have to find the largest element (suppose max) from the given array. Suppose 'x' be the number of digits in max. The 'x' is calculated because we need to go through the significant places of all elements.
+After that, go through one by one each significant place. Here, we have to use any stable sorting algorithm to sort the digits of each significant place.
+
+The average and worst case time complexity of Radix sort is θ(nk). The space complexity of Radix sort is O(n + k).
+
 
 ## Selection Sort
 In Selection sort, we star one number with all other numbers and swap them. Lowest number will end up in the left at each iteration.
