@@ -1,26 +1,68 @@
 package com.algorithms.sorting;
 
-public class TreeSort {
+class Node{
+  int value;
+  Node left;
+  Node right;
+  Node(int value){
+    this.value = value;
+    left = null;
+    right = null;        
+  }
+}
 
-	public static void main(String[] args) {
-		int arr[] = {5,7,4,3,2,1};
-		TreeSort bs = new TreeSort();
-		bs.sort(arr);
-	}
+class Tree{
+  Node node;
+  Tree(int value){
+    node = new Node(value);
+  }
+  public Node insert(Node node, int value){
+    if(node == null){
+      return new Node(value);
+    }
+    // Move to the left if passed value is 
+    // less than the current node
+    if(value < node.value){
+      node.left = insert(node.left, value);
+    }
+    // Move to the right if passed value is 
+    // greater than the current node
+    else if(value > node.value){
+      node.right = insert(node.right, value);
+    }
+    return node;
+  }
+    
+  // For traversing in order
+  public void inOrder(Node node){
+    if(node != null){
+      inOrder(node.left);
+      System.out.print(node.value + " ");
+      inOrder(node.right);
+    }
+  }
+    
+  public void inOrderDesc(Node node){
+    if(node != null){
+      inOrderDesc(node.right);
+      System.out.print(node.value + " ");
+      inOrderDesc(node.left);
+    }
+  }
+}
 
-	public void sort(int[] arr) {
-		int n = arr.length;
-		for(int i = 0; i < n-1; i++ ) {
-			int flag = 0;
-			for(int j = 0; j < n-i-1; j++) {
-				if(arr[j] > arr[j+1]) {
-					int temp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = temp;
-					flag = 1;
-				}
-			}
-			if(flag == 0) break;
-		}
-	}
+public class TreeSort {    
+  public static void main(String[] args) {
+    int[] arr = {50, 30, 70, 15, 7, 62, 22, 35, 87, 22, 31};
+    System.out.println("Original array- "+Arrays.toString(arr));
+    Tree tree = new Tree(arr[0]);
+    for(int num : arr){
+        tree.insert(tree.node, num);
+    }
+    System.out.println("Sorted Array (Ascending)- ");
+    tree.inOrder(tree.node);
+    System.out.println();
+    System.out.println("Sorted Array (Descending)- ");
+    tree.inOrderDesc(tree.node);
+  }
 }
